@@ -65,41 +65,51 @@ In terms of absolute figures, the greatest number of defaulters were found to ha
 
 ### Evaluation of Decision Tree Model
 
-Unbalanced Dataset (Original)
+**Unbalanced Dataset (Original)**
 
-Sensitivity	Specificity	Accuracy
-0.33	0.958	0.819
+| Sensitivity |	Specificity |	Accuracy |
+|-------------|-------------|----------|
+|0.33         | 0.958       | 0.819    |
 
-Balanced Dataset (Equal Sized Sampling)
+**Balanced Dataset (Equal Sized Sampling)**
 
-Sensitivity	Specificity	Accuracy
-0.568	0.809	0.688
+| Sensitivity |	Specificity |	Accuracy |
+|-------------|-------------|----------|
+|0.568        | 0.889       | 0.688    |
 
 Overall, the accuracy of the Decision Tree Model is reduced when the dataset is balanced after undergoing the equal sized sampling treatment via the Knime node. In return, the sensitivity increases as a result and the model is better able to correctly predict the number of defaulters. However, in both cases (unbalanced vs balanced datasets), the Decision Tree Model is still better suited to predicting the total number of non-defaulters.
 
-Logistic Regression
+## Logistic Regression
 
-Reasons for choice of Logistic Regression
+### Reasons for choice of Logistic Regression
 1.	It can be multinomial in nature. The dependent variable can have three or more possible types.	
 2.	The coefficient size can provide a measure of the strength of the predictor as well as the direction of its association (positive or negative)
 3.	Less inclined to over-fitting. Can run regularization L1 and L2 techniques to prevent/avoid over-fitting.
 4.	It can interpret model coefficients as indicators of feature importance.
 
-Parameter Optimization Details and Findings
+### Parameter Optimization Details and Findings
 The Logistic Regression model was ran on both the unbalanced and balanced datasets. For a more accurate and fairer view, we will be looking mainly at the balanced dataset.
-Method used: K-Fold Cross-Validation
-•	Chosen because this method ensures that every observation from the original dataset has the chance of appearing in both the training and test set.
-No. of folds: 10 
-•	Too small a number of folds will result in more computation time, whereas the larger the number of folds, the lesser the accuracy. As such, I have chosen 10 because I find it to be a good balance of both efficiency in computation time and accuracy.
-Choice of random seed: 1234
-Regularization Method: L2 Ridge
-Parameter for tuning: Variance 
-•	Variance is inversely proportional to lambda. So essentially the aim is to find the optimal lambda figure.
-Objective Function to Optimize: Maximization of Accuracy 
-Optimized Hyper parameter for unbalanced dataset:  1.7
-Optimized Hyper parameter for balanced dataset: 1  
 
-Logistic Regression Model Findings on Risk Factors
+**Method used:** K-Fold Cross-Validation
+<br /> •	Chosen because this method ensures that every observation from the original dataset has the chance of appearing in both the training and test set.
+
+**No. of folds:** 10 
+•	Too small a number of folds will result in more computation time, whereas the larger the number of folds, the lesser the accuracy. As such, I have chosen 10 because I find it to be a good balance of both efficiency in computation time and accuracy.
+
+**Choice of random seed:** 1234
+
+**Regularization Method:** L2 Ridge
+
+**Parameter for tuning:** Variance 
+<br /> •	Variance is inversely proportional to lambda. So essentially the aim is to find the optimal lambda figure.
+
+**Objective Function to Optimize:** Maximization of Accuracy 
+
+**Optimized Hyper parameter for unbalanced dataset:**  1.7
+
+**Optimized Hyper parameter for balanced dataset:** 1  
+
+### Logistic Regression Model Findings on Risk Factors
 Looking at P Value > 0.05, the significant risk factors were identified to be the limit balance, sex and the different marriage statuses. 
 In particular, females who were not married or single were more most prone to defaulting on their credit card payments. This was then followed by females who were married and then females who were single in descending order of likelihood to default.
 
