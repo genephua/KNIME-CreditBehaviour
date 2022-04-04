@@ -113,32 +113,29 @@ The Logistic Regression model was ran on both the unbalanced and balanced datase
 Looking at P Value > 0.05, the significant risk factors were identified to be the limit balance, sex and the different marriage statuses. 
 In particular, females who were not married or single were more most prone to defaulting on their credit card payments. This was then followed by females who were married and then females who were single in descending order of likelihood to default.
 
+### Evaluation of Logistic Regression Model
 
+**Unbalanced Dataset (Original)**
 
+| Sensitivity |	Specificity |	Accuracy |
+|-------------|-------------|----------|
+|0.344        | 0.955       | 0.82     |
 
+**Balanced Dataset (Equal Sized Sampling)**
 
-
-
-Evaluation of Logistic Regression Model
-Unbalanced Dataset (Original)
-
-Sensitivity	Specificity	Accuracy
-0.344	0.955	0.82
-
-Balanced Dataset (Equal Sized Sampling)
-
-Sensitivity	Specificity	Accuracy
-0.55	0.833	0.691
+| Sensitivity |	Specificity |	Accuracy |
+|-------------|-------------|----------|
+|0.55         | 0.833       |0.691     |
 
 Overall, the accuracy of the Logistic Regression Model is reduced when the dataset is balanced after undergoing the equal sized sampling treatment via the Knime node. In return, the sensitivity increases as a result and the model is better able to correctly predict the number of defaulters. However, in both cases (unbalanced vs balanced datasets), the Logistics Regression Model is still better suited to predicting the total number of non-defaulters.
 
-Comparison of Decision Tree and Logistic Regression Models
+## Comparison of Decision Tree and Logistic Regression Models
 
 Both models have similar accuracy figures. The Logistic Regression Model has a higher specificity than that of the Decision Tree Model. However, the Decision Tree Model has a higher sensitivity than the Logistic Regression Model. As we are more interested in detecting and predicting credit card defaulters, where defaulters in both models are defined as being the positive class, the Decision Tree Model would be the preferred model. 
 
 But it is important to note that the Decision Tree Model only edges out very slightly on sensitivity. Both models generally have very similar performance statistics. 
 
-Credit Card Defaulter Profiling
+### Credit Card Defaulter Profiling
 Looking at both predictive models, a credit card defaulter is likely to have the following profile:
 •	Has a high limit balance
 •	Female who is not married or single
