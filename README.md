@@ -36,26 +36,34 @@ Stratified sampling was also used for the two models to help to deal with this i
 1.	Capable of handling both continuous and binary (categorical) variables
 2.	Able to provide a clear indication of which fields are most important for prediction 
 
-Parameter Optimization Details and Findings
+### Parameter Optimization Details and Findings
 The decision tree model was ran on both the unbalanced and balanced datasets. For a more accurate and fairer view, we will be looking mainly at the balanced dataset.
-Method used: K-Fold Cross-Validation
-•	Chosen because this method ensures that every observation from the original dataset has the chance of appearing in both the training and test set.
-No. of folds: 10 
-•	Too small a number of folds will result in more computation time, whereas the larger the number of folds, the lesser the accuracy. As such, I have chosen 10 because I find it to be a good balance of both efficiency in computation time and accuracy.
-Choice of random seed: 1234
-Parameter for tuning: Minimum Number of Records
-Objective Function to Optimize: Maximization of Accuracy 
-Optimized Hyper parameter for Unbalanced Set:  46
-Optimized Hyper parameter for Balanced Set:  33
 
-Decision Tree Findings on Risk Factors
+**Method used:** K-Fold Cross-Validation
+<br /> •	Chosen because this method ensures that every observation from the original dataset has the chance of appearing in both the training and test set.
+
+**No. of folds:** 10 
+<br />  •	Too small a number of folds will result in more computation time, whereas the larger the number of folds, the lesser the accuracy. As such, I have chosen 10 because I find it to be a good balance of both efficiency in computation time and accuracy.
+
+**Choice of random seed:** 1234
+
+**Parameter for tuning:** Minimum Number of Records
+
+**Objective Function to Optimize:** Maximization of Accuracy 
+
+**Optimized Hyper parameter for Unbalanced Set:**  46
+
+**Optimized Hyper parameter for Balanced Set:**  33
+
+### Decision Tree Findings on Risk Factors
 
 Based on the Decision Tree formed (balanced dataset), customers who paid their credit card payments in full or paid the minimum amount generally did not default.
 
 Most defaulters were found to be customers who had delayed their credit card payments by 1 or 2 months. In general, customers who had delayed their credit card payments by 1 or more months were found to have a high likelihood of defaulting.
 
 In terms of absolute figures, the greatest number of defaulters were found to have delayed their credit card payments by 2 months.
-Evaluation of Decision Tree Model
+
+### Evaluation of Decision Tree Model
 
 Unbalanced Dataset (Original)
 
