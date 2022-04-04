@@ -14,26 +14,25 @@ In particular for Logistic Regression, in order to be able to examine the indivi
 In general, the continuous variables “Limit Balance” and “Age” were of different magnitudes and thus were normalized for better comparison. A Z-score normalization was used.
 
 ### Class Label Distribution
-Pie Chart of Defaulters vs Non-Defaulters
- 
+### Pie Chart of Defaulters vs Non-Defaulters
+
+![meta-chart (1)](https://user-images.githubusercontent.com/102946848/161546149-804310ff-c2da-4a49-92fa-055d77279294.jpeg)
+
 The dataset is unbalanced with respect to the number of defaulters versus the number of non-defaulters. The number of non-defaulters is represented by the orange colour in the pie chart and is 78% of the population. This is essentially more than three quarters of the population.
 The equal sized sampling node was used in Knime to deal with this large imbalance of class to help make the distribution fairer when it came to running the models.
 Stratified sampling was also used for the two models to help to deal with this imbalance.
 
+### Pie Chart of Defaulters vs Non-Defaulters (After Balancing)
 
+![meta-chart (2)](https://user-images.githubusercontent.com/102946848/161546927-f9e8095d-cefa-4a5e-a727-95776a60ab53.jpeg)
 
-
-
-Pie Chart of Defaulters vs Non-Defaulters (After Balancing)
- 
-
-Predictive Models Used
+### Predictive Models Used
 1.	Decision Tree Model
 2.	Logistic Regression Model
 
-Decision Tree
+## Decision Tree
 
-Reasons for choice of Decision Tree
+### Reasons for choice of Decision Tree
 1.	Capable of handling both continuous and binary (categorical) variables
 2.	Able to provide a clear indication of which fields are most important for prediction 
 
