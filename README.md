@@ -137,6 +137,6 @@ But it is important to note that the Decision Tree Model only edges out very sli
 
 ### Credit Card Defaulter Profiling
 Looking at both predictive models, a credit card defaulter is likely to have the following profile:
-•	Has a high limit balance
-•	Female who is not married or single
-•	Delays credit card payments by 1 or 2 months
+<br /> •	Has a high limit balance
+<br /> •	Female who is not married or single
+<br /> •	Delays credit card payments by 1 or 2 months
