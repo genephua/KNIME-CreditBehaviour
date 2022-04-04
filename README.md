@@ -140,3 +140,6 @@ Looking at both predictive models, a credit card defaulter is likely to have the
 <br /> •	Has a high limit balance
 <br /> •	Female who is not married or single
 <br /> •	Delays credit card payments by 1 or 2 months
+
+*Analysis powered by KNIME Analytics Platform*
+*Source: Data.xlsx*
