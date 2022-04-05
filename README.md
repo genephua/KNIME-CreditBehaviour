@@ -2,7 +2,7 @@
 ## To Predict Customer Default Based on Credit Behavour
 
 ### Project Details
-To build two predictive models for predicting customer default.
+To build two predictive models for predicting customer default based on the dataset used.
 
 ### Input features of the dataset
 The dataset contains information about the credit card payment patterns and profile of Taiwanese customers, and whether they had defaulted on the payments.
